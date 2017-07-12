@@ -86,7 +86,7 @@ class SwaggerUIView(View):
             response = render_to_response(
                 template_name, RequestContext(request, data))
         else:
-            data['request'] = request # Not sure if we need to append request?
+            data['request'] = request
             response = render_to_response(template_name, data)
 
         return response
